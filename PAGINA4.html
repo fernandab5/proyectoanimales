@@ -1,0 +1,89 @@
+<html>
+
+<head>
+
+</head>
+<body bgcolor=#00CED">
+<BODY style="font-family: Verdana">
+</p>
+<h2><script language="JavaScript1.2">
+
+//Neon Lights Text II by G.P.F. (gpf@beta-cc.de)
+//visit http://www.beta-cc.de
+//Visit http://www.dynamicdrive.com for this script 
+
+var message="Lista de animales:"
+var neonbasecolor="gray"
+var neontextcolor="#000000"
+var neontextcolor2="#FFFFA8"
+var flashspeed=100						// speed of flashing in milliseconds
+var flashingletters=3						// number of letters flashing in neontextcolor
+var flashingletters2=1						// number of letters flashing in neontextcolor2 (0 to disable)
+var flashpause=0						// the pause between flash-cycles in milliseconds
+
+///No need to edit below this line/////
+
+var n=0
+if (document.all||document.getElementById){
+document.write('<font color="'+neonbasecolor+'">')
+for (m=0;m<message.length;m++)
+document.write('<span id="neonlight'+m+'">'+message.charAt(m)+'</span>')
+document.write('</font>')
+}
+else
+document.write(message)
+
+function crossref(number){
+var crossobj=document.all? eval("document.all.neonlight"+number) : document.getElementById("neonlight"+number)
+return crossobj
+}
+
+function neon(){
+
+//Change all letters to base color
+if (n==0){
+for (m=0;m<message.length;m++)
+crossref(m).style.color=neonbasecolor
+}
+
+//cycle through and change individual letters to neon color
+crossref(n).style.color=neontextcolor
+
+if (n>flashingletters-1) crossref(n-flashingletters).style.color=neontextcolor2 
+if (n>(flashingletters+flashingletters2)-1) crossref(n-flashingletters-flashingletters2).style.color=neonbasecolor
+
+
+if (n<message.length-1)
+n++
+else{
+n=0
+clearInterval(flashing)
+setTimeout("beginneon()",flashpause)
+return
+}
+}
+
+function beginneon(){
+if (document.all||document.getElementById)
+flashing=setInterval("neon()",flashspeed)
+}
+beginneon()
+
+
+</script></h2>
+
+<a href="Delfinn.html" target="contenido"><li>Delfin</li></a>	
+<a href="Tiburon.html" target="contenido"><li>Tiburon</li>
+<a href="Pulpo.html" target="contenido"><li>Pulpo</li>
+<a href="Tortuga.html" target="contenido"><li>Tortuga</li>
+<a href="Cangrejo.html" target="contenido"><li>Cangrejo</li>
+<a href="Caballito de mar.html" target="contenido"><li>Caballito de mar</li>
+<a href="Ballena.html" target="contenido"><li>Ballena</li>
+<a href="Coral.html" target="contenido"><li>Coral</li>
+<a href="Medusa.html" target="contenido"><li>Medusa</li>
+<a href="Pez payaso.html" target="contenido"><li>Pez payaso</li>
+
+</ol>
+</body>
+
+</html>

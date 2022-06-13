@@ -1,0 +1,59 @@
+<html>
+
+<head>
+
+
+</head>
+
+<body bgcolor="#FA8072">
+<p align="center">
+
+<br>
+
+<script>
+
+/*
+Roller Coaster Script-
+By JavaScript Kit
+Over 200+ free scripts here!
+*/
+
+var fs=1
+var direction="right"
+function rollertext(whichone){
+var thetext=whichone
+for (i=0;i<thetext.length;i++){
+document.write(thetext.charAt(i).fontsize(fs))
+
+if (fs<7&&direction=="right")
+fs++
+else if (fs==7){
+direction="left"
+fs--
+}
+else if (fs==1){
+direction="right"
+fs++
+}
+else if (fs>1&&direction=="left")
+fs--
+
+}
+}
+//Change below text to your won
+rollertext("Delfin")
+</script></p>
+<p align="center">&nbsp;</p>
+</body>
+<p>Los delfines son un tipo de mamíferos cetáceos pertenecientes a la familia Delphinidae.
+ Pueden vivir más de 30 años en cautividad y tienen una longitud de 3,5 metros aproximadamente.
+ En la naturaleza, estos nadadores elegantes pueden alcanzar velocidades de más de 30 kilómetros 
+ por hora. Durante sus desplazamientos surgen a menudo a la superficie del mar para respirar, haciéndolo 
+ una media de dos o tres veces por minuto. Viajan en grupos sociales y se comunican entre sí por un complejo 
+ sistema de chirridos y silbidos que del mismo modo les sirve para ecolocalizar a sus presas. Pueden producir 
+ hasta 1.000 "ruidos de clic" por segundo. Estos sonidos viajan bajo el agua hasta que encuentran objetos, luego 
+ regresan a sus remitentes de delfines, revelando la ubicación, tamaño y forma de su objetivo. Se trata de animales muy inteligentes que no dejan de sorprender a los científicos pues han mostrado capacidades de aprendizaje y cognición muy superiores a las de otras especies. 
+ Se encuentran en los océanos tropicales y otras aguas cálidas de todo el mundo. Antaño fueron cazados extensamente por su carne y grasas usadas en lámparas de aceite y para cocinar. Hoy en día, la pesca del delfín se encuentra muy limitada,  no obstante los delfines siguen amenazados por la pesca comercial de otras especies como el atún, y pueden quedar mortalmente enredados en redes y otros equipos de pesca.
+ <center><img src="delfin.gif"></center>
+
+</html>
